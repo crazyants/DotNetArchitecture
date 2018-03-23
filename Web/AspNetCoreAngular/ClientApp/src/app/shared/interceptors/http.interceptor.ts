@@ -1,6 +1,6 @@
-import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from "@angular/common/http";
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from "@angular/common/http";
 import { Injectable, Injector } from "@angular/core";
-
+import 'rxjs/add/operator/do';
 import { AuthenticationService } from "../services/authentication.service";
 
 @Injectable()
@@ -20,6 +20,9 @@ export class CustomHttpInterceptor implements HttpInterceptor
 			}
 		});
 
-		return next.handle(request);
+		return next.handle(request).do((event: HttpEvent<any>) =>
+		{
+			if (event instanceof HttpResponse) { /* Response */ }
+		});
 	}
 }
