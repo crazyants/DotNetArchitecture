@@ -12,7 +12,6 @@ import { ValidationModule } from "./validation/validation.module";
 		CommonModule,
 		FormsModule,
 		ReactiveFormsModule,
-
 		ValidationModule
 	]
 })

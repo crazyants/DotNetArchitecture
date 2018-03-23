@@ -6,7 +6,7 @@ import { Option } from "../../models/option.model";
 	inputs: ["options"],
 	providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: AppSelectComponent, multi: true }],
 	selector: "app-select",
-	templateUrl: "./select.component.html",
+	templateUrl: "./select.component.html"
 })
 export class AppSelectComponent implements ControlValueAccessor
 {
