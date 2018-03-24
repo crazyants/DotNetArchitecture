@@ -1,7 +1,7 @@
 ﻿namespace Solution.Model.Enums
 {
-    public enum Status
-    {
-		Inactive, Active
+	public enum Status
+	{
+		Active = 1, Inactive = 2
 	}
 }
